@@ -1,0 +1,34 @@
+# 基础代码风格基于LLVM风格（但会覆盖以下自定义配置）
+BasedOnStyle: llvm
+
+# 缩进配置
+IndentWidth: 4       # 使用4空格缩进（LLVM默认为2）
+TabWidth: 4          # Tab宽度（与IndentWidth保持一致）
+UseTab: Never        # 永远使用空格代替Tab
+
+# 包含文件相关
+SortIncludes: false  # 禁用头文件自动排序（保持手动排序）
+
+# 行长度限制
+ColumnLimit: 120     # 最大行宽120字符（0表示不限制）
+
+# 函数参数换行规则
+AllowAllParametersOfDeclarationOnNextLine: false  # 禁止所有函数参数挤在一行
+BinPackParameters: false                         # 禁止参数自动压缩换行
+
+# 模板声明规则
+AlwaysBreakTemplateDeclarations: Yes  # 强制模板声明换行（保留多行格式）
+# 示例效果：
+# template <typename T>  →  template <typename T>
+# class Foo;             →  class Foo;
+
+# 大括号风格
+# BreakBeforeBraces: Allman  # 大括号独占一行（Allman风格）
+# 示例效果：
+# if (x) {       →  if (x)
+# }              →  {
+
+# 空格控制
+SpaceBeforeParens: Never   # 函数名和括号之间不加空格
+# 示例效果：
+# void foo () → void foo()
